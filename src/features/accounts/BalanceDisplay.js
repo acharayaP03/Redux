@@ -7,13 +7,15 @@ function formatCurrency(value) {
   }).format(value);
 }
 
-function BalanceDisplay({ balance }) {
-  // const balance = useSelector((state) => state.account.balance);
+function BalanceDisplay() {
+  const balance = useSelector((state) => state.account.balance);
   return <div className="balance">{formatCurrency(balance)}</div>;
 }
 
-function mapStateToProps(state) {
-  return { balance: state.account.balance };
-}
+// old way of connecting to the store
+// function mapStateToProps(state) {
+//   return { balance: state.account.balance };
+// }
 
-export default connect(mapStateToProps)(BalanceDisplay);
+// export default connect(mapStateToProps)(BalanceDisplay);
+export default BalanceDisplay;
