@@ -16,8 +16,6 @@ const customerSlice = createSlice({
     createCustomer: {
       prepare: (fullName, nationalID) => {
         const createdAt = new Date().toISOString();
-        console.log("createdAt", createdAt);
-        console.log("fullName", fullName);
 
         const payload = {
           fullName,
